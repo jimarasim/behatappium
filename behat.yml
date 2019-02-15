@@ -1,0 +1,32 @@
+# behat.yml
+default:
+  suites:
+    my_suite:
+      contexts:
+        - FeatureContext
+  extensions:
+    Behat\MinkExtension:
+      base_url:  'https://www.soundtransit.org'
+      sessions:
+        default:
+          goutte: ~
+        javascript_session:
+           appium:
+            browser: 'safari'
+            capabilities: { "platformName": "iOS", "platformVersion": "12.1", "deviceName": "iPhone 7"}
+
+android:
+  suites:
+    my_suite:
+      contexts:
+        - FeatureContext
+  extensions:
+    Behat\MinkExtension:
+      base_url:  'https://www.soundtransit.org'
+      sessions:
+        default:
+          goutte: ~
+        javascript_session:
+           appium:
+            browser: 'chrome'
+            capabilities: { "platformName": "Android", "platformVersion": "9.0", "deviceName": "Android Emulator", "avd": "Pixel"}
