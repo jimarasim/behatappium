@@ -7,13 +7,12 @@ default:
   extensions:
     Behat\MinkExtension:
       base_url:  'https://www.soundtransit.org'
+      javascript_session: 'mobile'
       sessions:
-        default:
-          goutte: ~
-        javascript_session:
+        mobile:
            appium:
             browser: 'safari'
-            capabilities: { "platformName": "iOS", "platformVersion": "12.1", "deviceName": "iPhone 7"}
+            capabilities: { "platformName": "iOS", "platformVersion": "12.1", "deviceName": "iPhone 8"}
 
 android:
   suites:
@@ -23,10 +22,27 @@ android:
   extensions:
     Behat\MinkExtension:
       base_url:  'https://www.soundtransit.org'
+      javascript_session: 'mobile'
       sessions:
-        default:
-          goutte: ~
-        javascript_session:
+        mobile:
            appium:
             browser: 'chrome'
             capabilities: { "platformName": "Android", "platformVersion": "9.0", "deviceName": "Android Emulator", "avd": "Pixel"}
+            
+seleniumgridappium:
+  suites:
+    my_suite:
+      contexts:
+        - FeatureContext
+  extensions:
+    Behat\MinkExtension:
+      base_url:  'https://www.soundtransit.org'
+      sessions:
+        default:    
+          selenium2:
+            wd_host: http://127.0.0.1:4444/wd/hub
+            browser: 'safari'
+            capabilities:
+              version: '12.1'
+              platform: 'IOS'
+              browserName: 'safari'
