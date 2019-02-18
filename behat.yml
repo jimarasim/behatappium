@@ -15,10 +15,6 @@ default:
             capabilities: { "platformName": "iOS", "platformVersion": "12.1", "deviceName": "iPhone 8"}
 
 android:
-  suites:
-    my_suite:
-      contexts:
-        - FeatureContext
   extensions:
     Behat\MinkExtension:
       base_url:  'https://www.soundtransit.org'
@@ -27,13 +23,9 @@ android:
         mobile:
            appium:
             browser: 'chrome'
-            capabilities: { "platformName": "Android", "platformVersion": "9.0", "deviceName": "Android Emulator", "avd": "Pixel"}
+            capabilities: { "platformName": "Android", "platformVersion": "9.0", "deviceName": "Android Emulator", "avd": "NexusOne"}
             
 seleniumgridappium:
-  suites:
-    my_suite:
-      contexts:
-        - FeatureContext
   extensions:
     Behat\MinkExtension:
       base_url:  'https://www.soundtransit.org'
