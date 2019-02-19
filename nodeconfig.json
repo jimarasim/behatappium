@@ -5,9 +5,7 @@
           "browserName": "Safari",
           "version":"12.1",
           "maxInstances": 1,
-          "platform":"iOS",
-          "deviceName":"iPhone 7",
-          "automationName":"XCUITest"
+          "platform":"iOS"
         }
       ],
   "configuration":
