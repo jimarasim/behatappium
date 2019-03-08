@@ -2,10 +2,10 @@
   "capabilities":
       [
         { 
-          "browserName": "Safari",
-          "version":"12.1",
+          "browserName": "Chrome",
+          "version":"9.0",
           "maxInstances": 1,
-          "platform":"iOS"
+          "platform":"ANDROID"
         }
       ],
   "configuration":
