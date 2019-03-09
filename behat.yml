@@ -39,13 +39,17 @@ seleniumgridappium:
               platform: 'ANDROID'
               browserName: 'chrome'
 
-seleniumfirefox:
+seleniumgrid:
   extensions:
     Behat\MinkExtension:
       base_url:  'https://www.soundtransit.org'
+      javascript_session: 'default'
       sessions:
         default:    
           selenium2:
             wd_host: http://127.0.0.1:4444/wd/hub
             browser: 'firefox'
-            capabilities: { "platform": "MAC", "browserName": "firefox", "version": "", "marionette": true }
+            capabilities: 
+              platform: 'MAC'
+              browserName: 'firefox'
+              marionette: true
